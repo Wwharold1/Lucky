@@ -1,0 +1,14 @@
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Business.dll
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Business.pdb
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Entity.dll
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\sportillod\source\repos\LuckyERP\Business\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.dll
+C:\Users\sportillod\source\repos\LuckyERP\Business\obj\Debug\netcoreapp3.1\Business.pdb

@@ -1,0 +1,111 @@
+//circulos table
+.circleExtDisponible::before{
+    content      : "";
+    position     : absolute;
+    height       : 8px;
+    width        : 8px;
+    background   : var(--success-color);
+    border-radius: 50%;
+    left         : -12px;
+    top          : 18px;
+}
+
+.circleExtAgotado::before{
+    content      : "";
+    position     : absolute;
+    height       : 8px;
+    width        : 8px;
+    background   : var(--error-color);
+    border-radius: 50%;
+    left         : -12px;
+    top          : 18px;
+}
+
+.circleExtMerma::before{
+    content      : "";
+    position     : absolute;
+    height       : 8px;
+    width        : 8px;
+    background   : var(--primary-color);
+    border-radius: 50%;
+    left         : -12px;
+    top          : 18px;
+}
+
+.circleExtTarde::before{
+    content      : "";
+    position     : absolute;
+    height       : 8px;
+    width        : 8px;
+    background   : var(--circle-tardanza-color );
+    border-radius: 50%;
+    left         : -12px;
+    top          : 18px;
+}
+
+
+//datepicker
+.dp-picker-input{
+    border         : 1.8px solid #bab7b7;
+    padding        : 10px;
+    height         : 25px;
+    outline        : 0;
+    min-width      : 220px;
+    min-height     : 30.57px;
+    // background     : url(../icons/utils/calendar.svg) no-repeat scroll 180px 3px;
+    border-radius  : 5px;
+    background-size: 45px 18px;
+}
+
+.dp-picker-input:focus{
+    border-color: var(--secondary-color-dark);
+}
+
+
+//input
+.input-general {
+    border       : 1.8px solid #bab7b7;
+    padding      : 0px 10px;
+    height       : 25px;
+    outline      : 0;
+    border-radius: 5px;
+    input[type=text]input[type="password"] {
+        outline         : 0
+    }
+}
+
+.input-general:focus {
+    border-color: var(--secondary-color-dark);
+}
+
+//input login
+.input-login {
+    input {
+        width         : 75%;
+        border        : none;
+        outline       : 0;
+        margin-left   : 10px;
+        margin-top    : -8px;
+        vertical-align: middle;
+    }
+    input[type=text]input[type="password"] {
+        outline         : 0
+    }
+}
+
+.action-button {
+    button {
+        width       : 110px;
+        margin-left : 12px;
+        margin-right: 12px;
+    }
+    button:nth-child(1) {
+        color     : white;
+        background: var(--secondary-color-dark);
+    }
+    button:nth-child(2) {
+        color     : var(--secondary-color-dark);
+        background: white;
+        border    : 1px var(--secondary-color-dark) solid;
+    }
+}

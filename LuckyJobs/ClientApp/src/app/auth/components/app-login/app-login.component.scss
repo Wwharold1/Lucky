@@ -1,0 +1,81 @@
+* {
+    color: var(--light-background-color );
+}
+
+.cabecera {
+    span {
+        font-family    : GothamBold;
+        font-size      : 25px;
+    }
+    h4 {
+        font-size  : 15px;
+        display        : flex;
+    }
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.body-login {
+    // background     : url("../../../assets/img/ebanisteria.png");
+    background-size: cover;
+    align-items    : center;
+    height         : 100vh;
+    width          : 100vw;
+}
+
+.cortina {
+    position        : absolute;
+    background-color: var(--light-background-color);
+    width           : 100%;
+    height          : 100%;
+    top             : 0;
+    left            : 0;
+    z-index         : 2;
+    opacity         : 76%;
+}
+
+.card-login {
+    display         : flex;
+    flex-flow       : column;
+    width           : 27vw;
+    height          : 45vh;
+    max-width       : 400px;
+    min-height      : 400px;
+    background-color: #F7FAFC;
+}
+
+.footer {
+    label {
+        color: var(--primary-text-color);
+    }
+    a {
+        color: var(--primary-color)
+    }
+}
+
+.actions {
+    margin-left : 15px;
+    margin-right: 15px;
+    label {
+        margin-top: 3px;
+    }
+}
+
+.action-button {
+    color           : var(--primary-text-color);
+    background-color: var(--primary-color)
+}
+
+@media (max-width: 1000px) {
+  .card-login{
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 420px) {
+    .card-login{
+      width: 300px !important;
+    }
+  }

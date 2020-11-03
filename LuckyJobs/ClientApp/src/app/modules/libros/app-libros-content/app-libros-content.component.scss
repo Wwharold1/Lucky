@@ -1,0 +1,118 @@
+.card-form {
+    width          : 90%;
+    margin         : 20px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.input-style {
+    width    : 220px;
+    margin   : 10px;
+    flex-flow: column;
+    .icon {
+        margin-left: 20px;
+    }
+}
+
+.column-flex {
+    margin         : 20px;
+    flex-flow      : column;
+    justify-content: inherit;
+    margin-bottom  : 0;
+    margin-top     : 0;
+}
+
+.row-flex {
+    margin         : 20px;
+    flex-flow      : row;
+    justify-content: inherit;
+    margin-bottom  : 0;
+    margin-top     : 0;
+}
+
+.buttons {
+    display        : flex;
+    margin-top     : 25px;
+    justify-content: space-around;
+}
+
+.content {
+    flex-flow: column;
+    .actions {
+        width      : 100%;
+        display    : inherit;
+        line-height: 35px;
+    }
+    button {
+        width: auto !important;
+    }
+    table {
+        width     : 100%;
+        margin-top: 20px;
+    }
+}
+
+.relative-row {
+    position: relative;
+}
+
+svg:hover {
+    fill: red;
+  }
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  .padding-margin-zero{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+  }
+  .flexbox>div {
+    text-align: center;
+    padding: 20px 0;
+    margin: 5px;
+  }
+  
+  @media(min-width:576px) {
+    .flexbox {
+      flex-flow: row wrap;
+    }
+    .flexbox>.left {
+      order: 1;
+      flex: 0.5;
+    }
+    .flexbox>.right {
+      order: 2;
+      flex: 0.5;
+    }
+    .flexbox>.center {
+      order: 3;
+      width: 100%;
+    }
+  }
+  
+  @media(min-width:768px) {
+    .flexbox {
+      flex-flow: row nowrap;
+    }
+    .flexbox>div {
+      width: 33.33% !important;
+    }
+    .flexbox>.left {
+      order: 1;
+    }
+    .flexbox>.center {
+      order: 2;
+    }
+    .flexbox>.right {
+      order: 3;
+    }
+  }

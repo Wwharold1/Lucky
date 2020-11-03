@@ -1,0 +1,31 @@
+<div class="body-login flex-center">
+    <div class="cortina">
+    </div>
+    <div class="z-5">
+        <mat-card class="card-login">
+            <div class="cabecera">
+                <br>
+                <span class="flex-center">Bienvenido!</span>
+                <br>
+                <h4 class="flex-center">Lucky Libreria</h4>
+            </div>
+            <br>
+            <form [formGroup]="loginGroup" (keyup.enter)="(loginGroup.invalid || isLoading) ? '' : loginUser()">
+                <mat-card class="flex-center input-login">
+                    <input matInput placeholder="Correo" autocomplete="off" type="text" formControlName="email">
+                </mat-card>
+                <br>
+                <mat-card class="flex-center input-login">
+                    <input matInput placeholder="Contraseña" type="password" formControlName="password">
+                </mat-card>
+            </form>
+            <br>
+            <br>
+            <div class="flex-center">
+                <button mat-button mat-raised-button class="action-button" (click)="loginUser()" [disabled]="loginGroup.invalid || isLoading">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>

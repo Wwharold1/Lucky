@@ -1,0 +1,25 @@
+<div [formGroup]="AddLibrosFormGroup" (ngSubmit)="guardar()">
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Escribir nombre" formControlName="nombre" />
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Cantidad</mat-label>
+        <input matInput OnlyNumber placeholder="Ingresar cantidad" formControlName="cantidad" />
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Asignatura</mat-label>
+        <mat-select formControlName="asignatura" >
+          <mat-option>--Seleccione--</mat-option>
+          <mat-option [value]="1">Matematica</mat-option>
+          <mat-option [value]="2">Comunicación</mat-option>
+          <mat-option [value]="3">Biología</mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div class="end">
+    <button mat-button mat-dialog-close>Cerrar</button>
+    <button mat-button (click)="guardar()" [disabled]="">Guardar</button>
+</div>

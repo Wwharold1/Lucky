@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport mode="side" [ngClass]="{'sidenav-expand': isExpanded}"
+      opened="true">
+      <mat-toolbar class="flex titulo-side pointer" (click)="onSidenavToggle()">
+        <ng-container *ngIf="isExpanded; else noExpanded">
+          <label class="pointer">Lucky Libreria</label>
+          <span class="cs-spacer pointer"></span>
+          <mat-icon class="menu-caret" >local_library</mat-icon>
+        </ng-container>
+        <ng-template #noExpanded>
+          <mat-icon class="pointer">menu</mat-icon>
+        </ng-template>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/main']"  class="link-list">
+          <span [@animateText]="isExpanded ? 'show' : 'hide'" class="pl-10">Home</span>
+        </a>
+        <a mat-list-item [routerLink]="['/main/libros']">
+          <span [@animateText]="isExpanded ? 'show' : 'hide'" class="pl-10">Libros</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [ngClass]="{'content-expand': isExpanded}">
+      <mat-toolbar class="toolbar flex">
+        <span class="w-20"></span>
+        <span class="cs-spacer"></span>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

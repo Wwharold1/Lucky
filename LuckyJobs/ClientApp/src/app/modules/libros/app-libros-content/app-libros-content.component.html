@@ -1,0 +1,105 @@
+<div class="flex-center" [formGroup]="filterGroup">
+    <mat-card class="card-form">
+        <div class="flexbox" style="width: 100%;">
+        <div class="left padding-margin-zero">
+            <div class="flex column-flex">
+                <div class="flex input-style">
+                    <label style="margin:0; text-align: left;">Descripcion</label>
+                    <input class="input-general" formControlName="descripcion" style="height: 30.58px !important;" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        
+            <div class="center padding-margin-zero">
+                <div class="flex column-flex">
+                <div class="flex input-style">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Asignatura</mat-label>
+                        <mat-select  formControlName="asignaturaId">
+                          <mat-option [value]="0">--Seleccione--</mat-option>
+                          <mat-option [value]="1">Matematica</mat-option>
+                          <mat-option [value]="2">Comunicación</mat-option>
+                          <mat-option [value]="3">Biología</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+        </div>
+            <div class="right padding-margin-zero">
+                <div class="flex column-flex">
+                <div class="flex input-style padding-margin-zero">
+                    <label style="margin:0; text-align: left;">Cantidad</label>
+                    <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+                    <div class="buttons action-button">
+                        <button mat-button mat-raised-button (click)="buscar()" >Buscar</button>
+                        <button mat-button mat-raised-button (click)="limpiar()">Limpiar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </mat-card>
+</div>
+<div class="flex-center">
+    <mat-card class="card-form content">
+        <div class="actions">
+            <span class="cs-spacer"></span>
+            <div class="action-button">
+                <button mat-button mat-raised-button (click)="openAddEditLibro(0)">Agregar Libro</button>
+            </div>
+        </div>
+        <div>
+           
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id_libro">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id_libro}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="stock">
+      <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="openAddEditLibro(element.id_libro)">
+                  <mat-icon>edit</mat-icon>
+                  <span>Editar</span>
+                </button>
+                <button mat-menu-item (click)="deleteLibro(element.id_libro)">
+                  <mat-icon>delete</mat-icon>
+                  <span>Eliminar</span>
+                </button>
+              </mat-menu>
+        </td>
+        
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+        </div>
+    </mat-card>
+
+</div>
